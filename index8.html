@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js" type="text/javascript" charset="UTF-8"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="type === 'A'">
+            A
+        </div>
+        <div v-else-if="type === 'B'">
+            B
+        </div>
+        <div v-else-if="type === 'C'">
+            C
+        </div>
+        <div v-else>
+            Not A/B/C
+        </div>
+        <h1 v-show="OK">Hello!</h1>
+    </div>
+
+    <script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            type : "B",
+            OK : false
+        },
+    });
+
+    </script>
+    <style type="text/css">
+        .test { font-size: 30px}
+        .green { color: #00FF00}
+        .active { background: #FF0000;}
+    </style>
+</body>
+</html>
